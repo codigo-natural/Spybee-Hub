@@ -1,0 +1,125 @@
+.container {
+  margin: 0 auto;
+  padding: 16px 16px 0px 16px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.title {
+  font-size: 1.875rem;
+  font-weight: bold;
+}
+
+.count {
+  background: rgb(205, 205, 205);
+  padding: 4px 16px;
+  font-size: small;
+  border-radius: 9999px;
+  margin-left: 8px;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.viewToggle {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.toggleButton {
+  padding: 8px;
+  border: none;
+  background: #fff;
+  border-right: 1px solid #ddd;
+  transition: background 0.2s;
+}
+
+.toggleButton:hover {
+  cursor: pointer;
+  background-color: #f3f4f6;
+}
+
+.viewToggle button:last-child {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.createButton {
+  background-color: #facc15;
+  color: white;
+  height: 2.5rem;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.createButton:hover {
+  cursor: pointer;
+  background-color: #eab308;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .controls {
+    flex-wrap: wrap;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .createButton {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 16px 8px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .title {
+    font-size: 1.25rem;
+  }
+
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .viewToggle {
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .createButton {
+    width: 100%;
+  }
+}

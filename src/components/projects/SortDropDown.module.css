@@ -1,0 +1,152 @@
+.container {
+  position: relative;
+  display: flex;
+  gap: var(--spacing-sm);
+  align-items: center;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 1px solid #ccc;
+  border-radius: var(--radius-md);
+  background-color: white;
+  cursor: pointer;
+  transition: var(--transition-base);
+  font-size: 14px;
+}
+
+.button:hover {
+  background-color: #f9fafb;
+  border-color: #9ca3af;
+}
+
+.currentSort {
+  font-size: 13px;
+  color: #374151;
+  font-weight: 500;
+  max-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.directionButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-sm);
+  border: 1px solid #ccc;
+  border-radius: var(--radius-md);
+  background-color: white;
+  cursor: pointer;
+  transition: var(--transition-base);
+  color: #374151;
+}
+
+.directionButton:hover {
+  background-color: #f9fafb;
+  border-color: #9ca3af;
+  transform: scale(1.05);
+}
+
+.directionButton:active {
+  transform: scale(0.95);
+}
+
+.menu {
+  position: absolute;
+  margin-top: var(--spacing-sm);
+  background-color: white;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  padding: var(--spacing-sm);
+  min-width: 220px;
+  z-index: 10;
+  top: 100%;
+  left: 0;
+}
+
+.item {
+  padding: 10px 16px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: var(--transition-base);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+}
+
+.item:hover {
+  background-color: #f9fafb;
+}
+
+.selected {
+  background-color: #fef3c7;
+  color: #92400e;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .container {
+    gap: 6px;
+  }
+
+  .button {
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+
+  .currentSort {
+    max-width: 120px;
+    font-size: 12px;
+  }
+
+  .directionButton {
+    padding: 6px;
+  }
+
+  .menu {
+    min-width: 200px;
+  }
+
+  .item {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+
+  .button {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .currentSort {
+    max-width: none;
+  }
+
+  .directionButton {
+    width: 100%;
+  }
+
+  .menu {
+    width: 100%;
+    min-width: auto;
+    left: 0;
+    right: 0;
+  }
+}
