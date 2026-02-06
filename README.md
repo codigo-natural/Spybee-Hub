@@ -25,7 +25,7 @@ Aplicación web para la gestión de proyectos con visualización en mapa interac
   - Debounce de 300ms para optimizar rendimiento
   - Búsqueda multi-campo (nombre, equipo, estado, plan)
   - Botón para limpiar búsqueda
-- **Ordenamiento avanzado**:
+- **Ordenamiento**:
   - Alfabético (A-Z)
   - Por número de incidencias
   - Por número de RFIs
@@ -33,27 +33,11 @@ Aplicación web para la gestión de proyectos con visualización en mapa interac
   - Toggle ascendente/descendente con indicadores visuales
 
 ### Visualización en Mapa
-- Integración con **MapLibre GL** (open source, sin tarjeta de pago)
-- **Marcadores personalizados** con logo de Spybee:
-  - Diseño circular con borde de color según estado
-  - Badge con número de incidencias
-  - Animación de pulso continua
-  - Efecto hover con escala
-  - Animación de entrada escalonada
-- **Popups informativos mejorados** con:
-  - Nombre del proyecto
-  - Plan contratado
-  - Estado actual (con color)
-  - Tamaño del equipo
-  - Número de incidencias
-  - Número de RFIs
-  - Número de tareas
-  - Iconos para mejor legibilidad
+- Integración con **MapLibre GL** (open source)
 - Navegación bidireccional lista ↔ mapa
 - Animación suave al centrar proyectos
 - Validación de coordenadas
 - Controles de navegación y escala
-- Estado de carga con spinner
 
 ### UX/UI
 - Estados de carga (loading states)
@@ -80,7 +64,7 @@ Aplicación web para la gestión de proyectos con visualización en mapa interac
 git clone <repository-url>
 
 # Navegar al directorio
-cd frontend_test_spybee
+cd name-directory
 
 # Instalar dependencias
 npm install
@@ -115,17 +99,6 @@ La aplicación sigue una **arquitectura híbrida**:
 - [x] Mapa MapLibre-GL con marcadores
 - [x] Click en proyecto -> centrar mapa
 - [x] Sincronización bidireccional
-
-### Mejoras de Calidad
-- [x] Custom hooks (useDebounce, useFilteredProjects)
-- [x] Búsqueda multi-campo
-- [x] Indicadores visuales de ordenamiento
-- [x] Popups informativos en mapa
-- [x] Marcadores personalizados por estado
-- [x] Loading states
-- [x] Estados vacíos
-- [x] Validación de datos
-- [x] Responsive design
 
 ## Scripts Disponibles
 
