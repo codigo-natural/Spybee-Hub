@@ -61,10 +61,10 @@ Aplicación web para la gestión de proyectos con visualización en mapa interac
 
 ```bash
 # Clonar el repositorio
-git clone <repository-url>
+git clone https://github.com/codigo-natural/Spybee-Hub.git
 
 # Navegar al directorio
-cd name-directory
+cd Spybee-Hub
 
 # Instalar dependencias
 npm install
